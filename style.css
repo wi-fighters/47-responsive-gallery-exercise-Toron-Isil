@@ -13,7 +13,8 @@ html {
 }
 
 li {
-  /* ??? */
+  list-style: none;
+  order: 1;
 }
 
 /* Layout */
@@ -40,43 +41,47 @@ h1 {
 
 /* Gallery */
 
-/*
-??? {
-  ???
-  ???
+.gallery {
+  /* ??? */
 }
-*/
+
 
 /* Keep image proportions on resize */
 img {
   max-width: 100%;
   height: auto;
   display: block;
+  border-radius: 15px;
 }
 
 /*
 When there's room for more than 1 column of 400px-wide images,
 change the layout of the gallery to show 2 columns
 */
-@media screen and (min-width: 400px) {
 
-  ul {
-    /* ??? */
-    /* ??? */
-  }
-
-  li {
-    /* ??? */
-  }
-}
 
 /*
 When there's room for more than 2 columns,
 change the layout of the gallery to show 3 columns
 */
-@media screen and (min-width: /* ??? */) {
+@media screen and (min-width: 824px) {
   li {
     width: calc(100% / 3);
+  }
+}
+
+@media screen and (min-width: 400px) {
+
+  ul {
+    display: flex; 
+    flex-wrap: wrap;
+  }
+
+  li {
+    margin: 0 0;
+    list-style: none;
+    order: 1;
+
   }
 }
 
